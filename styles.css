@@ -23,6 +23,9 @@ button {
     color: white;
     align-self: center;
 }
+button:hover {
+    background-color: #0056b3;
+}
 #contactForm {
     display: flex;
     flex-direction: column;
@@ -40,4 +43,15 @@ button {
 
 span, small {
     color: red;
+}
+
+#name, #email, #message {
+    outline: none;
+}
+#name:focus, #email:focus, #message:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+#message {
+    height: 100px;
 }
