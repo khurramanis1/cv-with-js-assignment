@@ -4,7 +4,7 @@ function openImg() {
     img.style.width = "250px";
     img.style.height = "312px";
     let pic = document.createElement("img");
-    pic.src = "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-881954-2379005.jpg&fm=jpg";
+    pic.src = "Pic/Khurram.png";
     pic.style.width = "100%";
     pic.style.height = "100%";
     pic.style.objectFit = "cover";
@@ -40,10 +40,13 @@ let message = document.getElementById("message");
 function submitForm(event){
     event.preventDefault();
     if(name.value.trim() === ""){
-        alert("Please enter your name")
+        alert("Please enter your name");
     }
     else if(email.value.trim() === ""){
         alert("Please enter an email address");
+    }
+    else if(email.value.trim() !== "@"){
+        alert("Please enter a valid email address");
     }
     else {
         alert("Thanks for submission!");

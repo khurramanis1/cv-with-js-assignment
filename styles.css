@@ -37,3 +37,7 @@ button {
     width: 350px;
     box-sizing: border-box;
 }
+
+span, small {
+    color: red;
+}
