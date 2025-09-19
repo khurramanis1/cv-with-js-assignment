@@ -37,19 +37,19 @@ function seeContact() {
 let name = document.getElementById("name");
 let email = document.getElementById("email");
 let message = document.getElementById("message");
-function submitForm(event){
+function submitForm(event) {
     event.preventDefault();
-    if(name.value.trim() === ""){
+    if (name.value.trim() === "") {
         alert("Please enter your name");
         name.style.borderColor = "red";
         return false
     }
-    else if(email.value.trim() === ""){
+    else if (email.value.trim() === "") {
         alert("Please enter an email address");
         email.style.borderColor = "red";
         return false;
     }
-    else if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+    else if (!email.value.includes("@") || !email.value.includes(".")) {
         alert("Please enter a valid email address");
         email.style.borderColor = "red";
         return false;
